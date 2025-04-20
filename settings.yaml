@@ -5,7 +5,7 @@ torch_dtype: float32               # Используем float32 для раб�
 attn_implementation: "eager"       # Использование стандартной реализации внимания
 bf16: false
 tf32: false
-output_dir: runs/gsm8k/cpu/Qwen2.5-0.5B-Instruct
+output_dir: runs/gsm8k/multinode/Qwen2.5-0.5B-Instruct-Gensyn-Swarm
 
 # Dataset arguments
 dataset_id_or_path: 'openai/gsm8k'
@@ -39,7 +39,3 @@ seed: 42
 
 # Script arguments
 max_rounds: 10000
-
-# Оптимизация для CPU
-num_workers: 16                    # Увеличено количество потоков
-pin_memory: true                   # Для более эффективного использования памяти
